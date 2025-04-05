@@ -1,5 +1,3 @@
-
-```markdown
 # MIPS 16-bit Architecture Implementation in Verilog
 
 ## Overview
