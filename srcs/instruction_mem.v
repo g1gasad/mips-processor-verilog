@@ -6,11 +6,11 @@ reg [15:0] instn_memory [0:7];
 initial begin
 // Bitwise Distribution:     3   3   3   3    4   = 16 total bits
 //                          op  rs  rt  rd  func
-	instn_memory[0]  <= 16'b000_000_000_000_0001; // add r3, r2, r1
-	instn_memory[1]  <= 16'b000_000_000_000_0001; // sub r3, r2, r1
-	instn_memory[2]  <= 16'b000_000_000_000_0010; // and r3, r2, r1
-	instn_memory[3]  <= 16'b000_000_000_000_0011; // or  r3, r2, r1
-	instn_memory[4]  <= 16'b000_000_000_000_0000; 
+	instn_memory[0]  <= 16'b000_001_010_000_0000; // add r0, r1, r2
+	instn_memory[1]  <= 16'b000_001_010_000_0001; // sub r0, r1, r2
+	instn_memory[2]  <= 16'b000_001_010_000_0010; // and r0, r1, r2
+	instn_memory[3]  <= 16'b000_001_010_000_0011; // or  r0, r1, r2
+	instn_memory[4]  <= 16'b001_001_010_000_0100; // slt
 	instn_memory[5]  <= 16'b000_000_000_000_0000;
 	instn_memory[6]  <= 16'b000_000_000_000_0000;
 	instn_memory[7]  <= 16'b000_000_000_000_0000;

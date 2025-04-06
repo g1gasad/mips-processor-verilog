@@ -9,9 +9,9 @@ reg [15:0] reg_file_ram [0:7];
 
 initial begin
 	reg_file_ram[0]  <= 16'b0000000000000001;
-	reg_file_ram[1]  <= 16'b0000000000000010;
-	reg_file_ram[2]  <= 16'b0000000000000100;
-	reg_file_ram[3]  <= 16'b0000000000000000;
+	reg_file_ram[1]  <= 16'b0000000000001110; // 14
+	reg_file_ram[2]  <= 16'b0000000000000100; // 4
+	reg_file_ram[3]  <= 16'b0000000000001000;
 	reg_file_ram[4]  <= 16'b0000000000000000;
 	reg_file_ram[5]  <= 16'b0000000000000000;
 	reg_file_ram[6]  <= 16'b0000000001000000;
