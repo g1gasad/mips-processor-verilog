@@ -1,13 +1,13 @@
-module mux2_1_3bits(sig_RegDst, rt, rd, write_reg);
-input sig_RegDst;
+module mux2_1_3bits(rt, rd, select, write_reg_addr);
+input select;
 input [2:0] rt, rd;
-output reg [2:0] write_reg;
+output reg [2:0] write_reg_addr;
 
 always@(*) begin
-if (~sig_RegDst)
-	write_reg = rt;
+if (~select)
+	write_reg_addr <= rt;
 else
-	write_reg = rd;
+	write_reg_addr <= rd;
 end
 
 endmodule
