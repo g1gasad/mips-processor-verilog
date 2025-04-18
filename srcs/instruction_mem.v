@@ -11,7 +11,7 @@ initial begin
 	instn_memory[2]  <= 16'b000_001_010_000_0010; // and r0, r1, r2
 	instn_memory[3]  <= 16'b000_001_010_000_0011; // or  r0, r1, r2
 	instn_memory[4]  <= 16'b001_001_010_000_0100; // slt
-	instn_memory[5]  <= 16'b000_000_000_000_0000;
+	instn_memory[5]  <= 16'b111_011_111_0011111; // addi r7, r3, 31
 	instn_memory[6]  <= 16'b000_000_000_000_0000;
 	instn_memory[7]  <= 16'b000_000_000_000_0000;
 //	instn_memory[8]  <= 16'b000_000_000_000_0000;
