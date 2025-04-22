@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module instruction_mem(pc, instruction);
 input [2:0] pc;
 output reg [15:0] instruction;
@@ -14,14 +16,6 @@ initial begin
 	instn_memory[5]  <= 16'b111_011_111_0011111; // addi r7, r3, 31
 	instn_memory[6]  <= 16'b000_000_000_000_0000;
 	instn_memory[7]  <= 16'b000_000_000_000_0000;
-//	instn_memory[8]  <= 16'b000_000_000_000_0000;
-//	instn_memory[9]  <= 16'b000_000_000_000_0000;
-//	instn_memory[10] <= 16'b000_000_000_000_0000;
-//	instn_memory[11] <= 16'b000_000_000_000_0000;
-//	instn_memory[12] <= 16'b000_000_000_000_0000;
-//	instn_memory[13] <= 16'b000_000_000_000_0000;
-//	instn_memory[14] <= 16'b000_000_000_000_0000;
-//	instn_memory[15] <= 16'b000_000_000_000_0000;
 end
 always@(*) begin
 	instruction <= instn_memory[pc]; end

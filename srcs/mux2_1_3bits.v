@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module mux2_1_3bits(rt, rd, select, write_reg_addr);
 input select;
 input [2:0] rt, rd;

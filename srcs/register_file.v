@@ -1,8 +1,10 @@
-module register_file(sig_regWrite, wrReg_addr, wr_data,
-                    rdReg_addr1, rdReg_addr2,
+`timescale 1ns / 1ps
+
+module register_file(clk, sig_regWrite, wr_addr, wr_data,
+                    rd_addr1, rd_addr2,
                     data1, data2);
-input sig_regWrite;
-input [2:0] rdReg_addr1, rdReg_addr2, wrReg_addr;
+input clk, sig_regWrite;
+input [2:0] rd_addr1, rd_addr2, wr_addr;
 input [15:0] wr_data;
 output reg [15:0] data1, data2;
 reg [15:0] reg_file_ram [0:7];
@@ -17,11 +19,12 @@ initial begin
 	reg_file_ram[6]  <= 16'b0000000001000000;
 	reg_file_ram[7]  <= 16'b0000000001000010;
 end
-always@(*) begin
+always@(posedge clk) begin
 	if (sig_regWrite)
-		reg_file_ram[wrReg_addr] <= wr_data;
-	else begin
-		data1 <= reg_file_ram[rdReg_addr1];
-		data2 <= reg_file_ram[rdReg_addr2]; end
+		reg_file_ram[wr_addr] <= wr_data;
+end
+always@(*) begin
+	data1 <= reg_file_ram[rd_addr1];
+	data2 <= reg_file_ram[rd_addr2]; 
 end
 endmodule

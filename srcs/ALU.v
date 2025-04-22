@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module ALU(a, b, sig_alu_control, result, sig_zero);
 input [15:0] a, b;
 input [2:0] sig_alu_control;

@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module ALUcontrol(sig_ALUop, func, sig_alu_control);
 input [1:0] sig_ALUop;
 input [3:0] func;
